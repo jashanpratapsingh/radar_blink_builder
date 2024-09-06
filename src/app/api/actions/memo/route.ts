@@ -4,30 +4,24 @@ import { clusterApiUrl, ComputeBudgetProgram, Connection, PublicKey, Transaction
 export const GET = (req: Request) => {
 
     const payload : ActionGetResponse = {
-        icon: new URL("/dash_lottery.png", new URL(req.url).origin).toString(),
-        label: "Enter your 3 lottery numbers",
-        title: "DASH Lottery",
-        description: "Every Friday buy a ticket to win the Jackpot Select for 3 numbers for the Lottery. Enter the numbers between 0 and 20. For example, you could select: 2,14,7",
+        icon: new URL("/bob.webp", new URL(req.url).origin).toString(),
+        label: "Choose the blink that you want to make right now",
+        title: "Hi, I am Bob the blink maker",
+        description: "There are currently threee options for the blinks that you want to make. Choose from the options that are available right now.",
         links: {
             actions: [
               {
-                href: `/api/actions/memo/numbers`,
-                label: 'Buy Lottery',
-                parameters: [
-                  {
-                    name: "first_number",
-                    label: 'Enter the first number',
-                  },
-                  {
-                    name: "second_numbers",
-                    label: 'Enter the second number',
-                  },
-                  {
-                    name: "thrid_number",
-                    label: "Enter the thrid number"
-                  }
-                ],
+                href: `/api/actions/memo/dca`,
+                label: 'DCA'
               },
+              {
+                href: "/api/actions/memo/swap",
+                label: 'Swap'
+              },
+              {
+                href: "/api/actions/memo/fundraising",
+                label: 'Fundrasing'
+              }
             ]
     }
 }
