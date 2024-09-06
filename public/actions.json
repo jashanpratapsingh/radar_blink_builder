@@ -1,0 +1,12 @@
+{
+    "rules": [
+        {
+            "pathPattern": "/dsa",
+            "apiPath": "/api/actions/memo"
+        },
+        {
+            "pathPattern": "/donate",
+            "apiPath": "/api/actions/memo"
+        }
+    ]
+}
